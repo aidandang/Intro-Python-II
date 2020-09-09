@@ -4,7 +4,7 @@ from room import Room
 
 room = {
     'outside':  Room("Outside Cave Entrance",
-                     "North of you, the cave mount beckons"),
+                     """North of you, the cave mount beckons"""),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
 passages run north and east."""),
@@ -24,14 +24,14 @@ earlier adventurers. The only exit is to the south."""),
 
 # Link rooms together
 
-room['outside'].n_to = room['foyer']
-room['foyer'].s_to = room['outside']
-room['foyer'].n_to = room['overlook']
-room['foyer'].e_to = room['narrow']
-room['overlook'].s_to = room['foyer']
-room['narrow'].w_to = room['foyer']
-room['narrow'].n_to = room['treasure']
-room['treasure'].s_to = room['narrow']
+# room['outside'].n_to = room['foyer']
+# room['foyer'].s_to = room['outside']
+# room['foyer'].n_to = room['overlook']
+# room['foyer'].e_to = room['narrow']
+# room['overlook'].s_to = room['foyer']
+# room['narrow'].w_to = room['foyer']
+# room['narrow'].n_to = room['treasure']
+# room['treasure'].s_to = room['narrow']
 
 #
 # Main
@@ -49,3 +49,5 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+print(room['outside'].n_to())
